@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Intrapro/.vs/Intrapro
+/Intrapro/Intrapro/bin
+/Intrapro/Intrapro/obj/Debug
