@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Intrapro/.vs/Intrapro
+/Intrapro/.vs/Intrapro/FileContentIndex
 /Intrapro/Intrapro/bin
 /Intrapro/Intrapro/obj/Debug
+/Intrapro/.vs/Intrapro/v16

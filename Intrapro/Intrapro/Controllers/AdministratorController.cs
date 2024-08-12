@@ -6,9 +6,14 @@ using System.Web.Mvc;
 
 namespace Intrapro.Controllers
 {
-    public class HomeController : Controller
+    public class AdministratorController : Controller
     {
+        // GET: Administrator
         public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Register()
         {
             return View();
         }
