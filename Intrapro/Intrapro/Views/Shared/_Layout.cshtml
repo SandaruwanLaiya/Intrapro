@@ -3,23 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Intrapro</title>
     <link rel="stylesheet" href="~/Content/css/MainLayout.css">
+    <link rel="stylesheet" href="~/Content/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     
     <div class="container">
         <div class="side-panel">
-            <img src="~/Content/images/logo.png" id="logo"/>
-            <a href="#link1">Link 1</a>
-            <a href="#link2">Link 2</a>
-            <a href="#link3">Link 3</a>
+            <img src="~/Content/images/logo.png" id="logo" />
+            <a href="@Url.Action("Index", "Master")">Master</a>
+            <a href="@Url.Action("Index", "Security")">Security</a>
+            <a href="@Url.Action("Index", "Doc")">Doc</a>
+            <a href="#link3">Receiving</a>
+            <a href="#link3">Issuing</a>
         </div>
         <div class="main-content">
             <div class="top-bar">
-                <div><h2 style="padding: 0; margin: 0">Intrapro</h2></div>
-                <div>TH-TTT</div>
-                <div>G.D.L.Sandaruwan-Admin</div>
+                <div><h2 style="padding: 0; margin: 0"><a href="@Url.Action("Index", "Home")">Intrapro</a></h2></div>
+                <div><label id="WarehouseandCompany">TH-TTT</label></div>
+                <div><labl id="UserNameandRoll">G.D.L.Sandaruwan-Admin</labl></div>
+                <div><a href="javascript:void(0);" id="userIcon"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></a></div>
+            </div>
+            <div id="userDetailsPanel" style="display: none;">
+                <h3>User Details</h3>
+                <p>Name: John Doe<br>Email: john.doe@example.com<br>Role: Administrator</p>
+                <!-- Add more details as needed -->
+                <!-- Settings Link -->
+                <a href="@Url.Action("Register", "Administrator")" class="btn">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Settings
+                </a>
+                <br>
+                <!-- Sign Out Link -->
+                <a href="@Url.Action("Index", "Administrator")" class="btn">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out
+                </a>
             </div>
             <div class="content-area">
                 @RenderBody()
@@ -29,6 +47,6 @@
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript" src="~/Content/js/MainLayout.js"></script>
 </body>
 </html>
